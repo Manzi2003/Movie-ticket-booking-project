@@ -1,12 +1,10 @@
-/**
- * Represents a movie showing. Each movie has its own array of seats.
- */
+//Represents a movie showing. Each movie has its own array of seats.
 public class Movie {
     private String title;
     private String genre;
-    private int duration;      // in minutes
+    private int duration;
     private String rating;
-    private double price;      // base (Regular) ticket price
+    private double price;
     private String showtime;
     private Seat[] seats;
 
@@ -20,7 +18,7 @@ public class Movie {
         createSeats();
     }
 
-    // Creates 3 rows (A, B, C) with 5 seats each = 15 seats
+    // Creates 3 rows with 5 seats each
     private void createSeats() {
         String rows = "ABC";
         seats = new Seat[15];
@@ -33,7 +31,6 @@ public class Movie {
         }
     }
 
-    // Finds a seat by its number (e.g. "A3"). Returns null if not found.
     public Seat findSeat(String seatNumber) {
         int i = 0;
         while (i < seats.length) {
@@ -54,8 +51,7 @@ public class Movie {
         }
         return count;
     }
-
-    // Getters and setters
+    
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
