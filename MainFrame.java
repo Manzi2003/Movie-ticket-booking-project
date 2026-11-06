@@ -1,10 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * The main Swing window with three tabs:
- * View Movies, Book Ticket, and Bookings (view / cancel).
- */
+
 public class MainFrame extends JFrame {
     private BookingSystem system;
 
