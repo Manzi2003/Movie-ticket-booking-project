@@ -1,6 +1,4 @@
-/**
- * Represents one seat in a cinema hall.
- */
+//Represents one seat in a cinema hall.
 public class Seat {
     private String seatNumber;
     private boolean booked;
