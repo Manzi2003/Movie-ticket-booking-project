@@ -1,8 +1,5 @@
-/**
- * Links a customer, a movie and a seat together.
- */
 public class Booking {
-    private static int nextId = 1;   // shared counter so every booking gets a unique ID
+    private static int nextId = 1;
 
     private int bookingId;
     private Customer customer;
