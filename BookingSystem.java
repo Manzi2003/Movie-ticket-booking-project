@@ -1,6 +1,3 @@
-/**
- * Holds the movies and bookings (in arrays) and contains the main logic.
- */
 public class BookingSystem {
     private static final int MAX_MOVIES = 20;
     private static final int MAX_BOOKINGS = 100;
@@ -15,7 +12,7 @@ public class BookingSystem {
 
     public boolean addMovie(Movie movie) {
         if (movieCount >= MAX_MOVIES) {
-            return false;   // array is full
+            return false;  
         }
         movies[movieCount] = movie;
         movieCount++;
@@ -23,7 +20,6 @@ public class BookingSystem {
     }
 
     public Movie[] getMovies() {
-        // return only the filled part of the array
         Movie[] result = new Movie[movieCount];
         for (int i = 0; i < movieCount; i++) {
             result[i] = movies[i];
@@ -48,10 +44,6 @@ public class BookingSystem {
 
     // ---------- Bookings ----------
 
-    /**
-     * Books a seat. Returns the new Booking, or null if the seat
-     * does not exist, is already taken, or the bookings array is full.
-     */
     public Booking bookTicket(Movie movie, String seatNumber, String ticketType,
                               String name, String phone) {
         if (bookingCount >= MAX_BOOKINGS) {
@@ -73,15 +65,12 @@ public class BookingSystem {
         return booking;
     }
 
-    /**
-     * Cancels a booking by ID: frees the seat and removes it from the array.
-     */
+    
     public boolean cancelBooking(int bookingId) {
         for (int i = 0; i < bookingCount; i++) {
             if (bookings[i].getBookingId() == bookingId) {
                 bookings[i].getSeat().setBooked(false);
 
-                // shift the remaining bookings left to fill the gap
                 for (int j = i; j < bookingCount - 1; j++) {
                     bookings[j] = bookings[j + 1];
                 }
@@ -90,7 +79,7 @@ public class BookingSystem {
                 return true;
             }
         }
-        return false;   // no booking with that ID
+        return false;
     }
 
     public Booking[] getBookings() {
