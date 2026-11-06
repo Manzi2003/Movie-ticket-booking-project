@@ -1,6 +1,3 @@
-/**
- * Represents a customer who books a ticket.
- */
 public class Customer {
     private String name;
     private String phone;
