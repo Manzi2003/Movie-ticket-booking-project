@@ -1,8 +1,7 @@
 /*
  * CSC 1102 Practical Exam Project: Movie Ticket Booking System
- * Group leader: <name>
- * Group members: <name 1>, <name 2>, <name 3> ...
- * GitHub: <repository link>
+ * Group leader: Okol Moses
+ * Group members: Ageno Abigail Nouelinah, Kayaga Gabriella Lyton, Omara Henry Muge, Manzi Daudi Dembe
  */
 import javax.swing.SwingUtilities;
 
